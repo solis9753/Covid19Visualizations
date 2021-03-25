@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Stretched Chord to show Flows</title>
+
+	<!-- D3.js -->	
+    <script src="https://d3js.org/d3.v3.js"></script>
+	
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	<!-- Open Sans & CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:700,400,300" rel='stylesheet' type='text/css'>
+	<!-- viridis colors -->
+	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+	
+	  <style>
+		body {
+		  font-family: 'Open Sans', sans-serif;
+		  font-size: 12px;
+		  font-weight: 400;
+		  color: #525252;
+		  text-align: center;
+		}	
+		
+		line {
+		  stroke: #000;
+		  stroke-width: 1.px;
+		}
+
+		text {
+		  font-size: 8px;
+		}
+
+		.titles{
+		  font-size: 10px;
+		}
+		
+		#tooltip {
+        color: white;
+        opacity: .5;
+        background: #333;
+        padding: 5px;
+        border: 10px solid lightgrey;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 10;
+        visibility: hidden;
+        white-space: nowrap;
+        pointer-events: none;
+      }
+      #circle circle {
+        fill: none;
+        pointer-events: all;
+      }
+      path.chord {
+		  fill-opacity: .80;
+		  stroke: #000;
+      stroke-width: .00000025px;
+		}
+      path.group {
+        fill-opacity: .;
+      }
+      #circle:hover path.fade {
+        fill-opacity: 0.02;
+      }
+	  </style>
+  </head>
+  <body>
+
+    <div id="chart"></div>
+    <div id="tooltip"></div>
+    <script src="d3_2.js"></script>
+	
+  </body>
+</html>
