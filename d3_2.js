@@ -174,16 +174,16 @@ var chords = wrapper.selectAll("path.chord")
 	.style("opacity", function(d) { return (Names[d.source.index] === "" ? 0 : opacityDefault); }) 
 	.attr("d", path)
 //	.on("mouseover", mouseover);
-	.on("mouseover", function (d) {
-                  d3.select("#tooltip")
-                    .style("visibility", "visible")
-                    .html("Source: " + Names[d.source.index] + "<br>Target: " + Names[d.target.index])
-                    .style("top", function () { return (d3.event.pageY - 100)+"px"})
-                    .style("left", function () { return (d3.event.pageX - 100)+"px";})
-                })
-  .on("mouseout", function (d) { d3.select("#tooltip").style("visibility", "hidden") });	
-//       .on("mouseover", fade(.1))
-//       .on("mouseout", fade(1));
+//	.on("mouseover", function (d) {
+//                  d3.select("#tooltip")
+//                    .style("visibility", "visible")
+//                    .html("Source: " + Names[d.source.index] + "<br>Target: " + Names[d.target.index])
+//                    .style("top", function () { return (d3.event.pageY - 100)+"px"})
+//                    .style("left", function () { return (d3.event.pageX - 100)+"px";})
+//                })
+//  .on("mouseout", function (d) { d3.select("#tooltip").style("visibility", "hidden") });	
+       .on("mouseover", fade(.1))
+       .on("mouseout", fade(1));
 
 ////////////////////////////////////////////////////////////
 ///////////////////////// Tooltip //////////////////////////
