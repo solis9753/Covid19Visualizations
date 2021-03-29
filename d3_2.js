@@ -1,6 +1,12 @@
 ////////////////////////////////////////////////////////////
 //////////////////////// Set-up ////////////////////////////
 ////////////////////////////////////////////////////////////
+
+// Some resources and inspiration from:
+// https://www.visualcinnamon.com/2016/06/orientation-gradient-d3-chord-diagram/
+// https://d3js.org/
+// http://bl.ocks.org/nbremer/8295697aee7844da2299
+
 var screenWidth = $(window).width();
 
 var margin = {left: 50, top: 10, right: 50, bottom: 10},
@@ -185,8 +191,8 @@ var chords = wrapper.selectAll("path.chord")
 
 //Arcs
 g.append("title")	
-	.text(function(d, i) {return d.value + " mean in " + Names[i];});
-	
+//	.text(function(d, i) {return d.value + " mean with " + Names[i];});
+	  .text(function(d, i) {return "All patients with " + Names[i];});
 //Chords
 chords.append("title")
 	.text(function(d) {
