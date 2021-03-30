@@ -253,7 +253,8 @@ function fade(opacity) {
            return d.target.index != i && d.source.index != i;
          })
          .transition()
-         .style("opacity", opacity)
+//         .style("opacity", opacity)
+         .style("opacity", function(d) { return (Names[d.source.index] === "" ? 0 : opacity); }) 
 //         .style("opacity", function(d) { return (Names[d.source.index] === "" ? 0 : opacityDefault); }) 
    };
  }
