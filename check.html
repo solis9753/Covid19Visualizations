@@ -104,11 +104,11 @@
     <p>Having the ability to display huge junks of information in a chart while maintaining clarity and readability is a challenge in itself. Hierarchical information, such as those we encounter within multi-center, multi-national network studies, is a frequent </p> 
     <br />
     <h2>How I made this</h2>
-    <p>This graph is as inspiration from the work of many people. First and foremost, the OHDSI team and its members that generated the CHARYBDIS study, from which the information displayd in this chord diagram is obtained. The data was dowloaded from the <a href="https://data.ohdsi.org/Covid19CharacterizationCharybdis/">OHDSI's data repository</a>. It was then parsed to R, where a basic exploration was done. The data consisted of information about patients from 8 databases and 54452 risk factors based on conditions and medication, groupd in three categories:<br /> 
+    <p>This graph is as inspiration from the work of many people. First and foremost, the OHDSI team and its members that generated the CHARYBDIS study, from which the information displayd in this chord diagram is obtained. The data was dowloaded from the <a href="https://data.ohdsi.org/Covid19CharacterizationCharybdis/">OHDSI's data repository</a>. It was then parsed to R, where a basic exploration was done. The data consisted of information about patients from 8 databases and 54452 risk factors based on conditions and medications, grouped in three categories:<br /> 
     a) cohort during day -365 through -1 days overlap the index, <br /> 
     b) cohort during day -30 through -1 days overlap the index,<br /> 
     c) cohort during day 1 through 30 days overlap the index. <br /> 
-    A decision was made to display all risk factors that concerned all conditions included in the data. It resulted to the inclusion of 40 distinct risk factors in a total of 246 covariates.</p> 
+    A decision was made to display all risk factors that concerned all conditions included in the data in the last year prior to index date. It resulted to the inclusion of 40 distinct risk factors in a total of 246 covariates.</p> 
     </div>
     <div id="tooltip"></div>
       <script src="d3_2.js"></script>
